@@ -42,9 +42,9 @@ def get_page_source(html):
                 }
                 TF = False
                 filename = 'E:\\G-BOX\\document\\zhihujinghua\\anwsers.txt'
-                with open(filename,'a+',encoding='utf-8') as anwsers:
+                with open(filename,'r+',encoding='utf-8') as anwsers:
                     title = anwsers.read()
-                    if str(question[0]) not in title:
+                    if str(question[0]) not in str(title):
                         anwsers.write(str(question[0])+"\n")
                         TF = True
                     else:
